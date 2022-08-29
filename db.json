@@ -1,0 +1,30 @@
+{
+  "trips" :[
+    {
+      "id": 1,
+      "trip_name": "European getaway",
+      "countries":["Denmark","Greece","UK"],
+      "start_date": "08012011",
+      "end_date": "08252011"
+    }
+
+  ],
+
+  "events" :[
+    {
+      "id": 1,
+      "trip_id": 1,
+      "event": "Visiting Rosenborg Castle",
+      "cost": 15.00,
+      "category": "Tourism",
+      "date_of_event": "08082011"
+    }
+  ],
+
+  "users" :[
+    {
+      "id" :1,
+      "name" : "Bobby"
+    }
+  ]
+}
