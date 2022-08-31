@@ -1,30 +1,52 @@
 {
-  "trips" :[
+  "trips": [
     {
       "id": 1,
-      "trip_name": "European getaway",
-      "countries":["Denmark","Greece","UK"],
-      "start_date": "08012011",
-      "end_date": "08252011"
+      "tripName": "European getaway",
+      "countries": [
+        "Denmark",
+        "Greece",
+        "UK"
+      ],
+      "start_date": "2011-08-01",
+      "end_date": "2011-08-25"
+    },
+    {
+      "tripName": "Scandinavian Adventure",
+      "countries": [
+        "Norway",
+        "Sweden",
+        "Finland",
+        "Denmark"
+      ],
+      "start_date": "2017-07-15",
+      "end_date": "2017-08-15",
+      "id": 2
+    },
+    {
+      "tripName": "Oktoberfest",
+      "countries": [
+        "Germany"
+      ],
+      "start_date": "2018-09-15",
+      "end_date": "2018-09-25",
+      "id": 3
     }
-
   ],
-
-  "events" :[
+  "events": [
     {
       "id": 1,
       "trip_id": 1,
       "event": "Visiting Rosenborg Castle",
-      "cost": 15.00,
+      "cost": 15,
       "category": "Tourism",
-      "date_of_event": "08082011"
+      "date_of_event": "2011-08-08"
     }
   ],
-
-  "users" :[
+  "users": [
     {
-      "id" :1,
-      "name" : "Bobby"
+      "id": 1,
+      "name": "Bobby"
     }
   ]
 }

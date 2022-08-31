@@ -2,19 +2,19 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import TripPage from "./TripPage";
 
 function App() {
-
 
   return (
     <div>
       <NavBar />
       <Switch>
-      <Route path="/">
+        <Route  path="/" exact>
           <Home />
         </Route>
         <Route path="/trips">
-          {/* enter our trips component here */}
+           <TripPage />
         </Route>
         <Route path="/budget">
           {/* enter budget component here */}
@@ -33,10 +33,13 @@ export default App;
 // --Home
 // --TripsPage
 // ---New Trip Form
-// --Events
-// ---submit event
-// ---budget
-// ----budget list
+// ---Trip List
+// ----Trip card
+// -----Events page(unique to each individual trip)
+// ------Event list 
+// ------submit event
+// ---budget page 
+// ----budget list (each card with trip name on it and button to click into trip budget)
 // ----budget pie graph
 
 
