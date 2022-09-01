@@ -39,7 +39,7 @@ export default App;
 // ------Event list 
 // ------submit event
 // ---budget page 
-// ----budget list (each card with trip name on it and button to click into trip budget)
+// ----budget list (each card with trip name on it and button to)
 // ----budget pie graph
 
 
