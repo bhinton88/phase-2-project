@@ -1,21 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import TripForm from "./TripForm"
 import TripList from "./TripList";
 
-function TripsPage() {
-  const [tripData,setTripData] = useState([])
+function TripsPage({ tripData, eventsData }) {
 
-  useEffect(()=> {
-    fetch("http://localhost:3000/trips")
-    .then(response => response.json()
-    .then(data=> setTripData(data)))
-  }, [])
 
   return (
     <div>
       Check out my trips!
       <TripForm />
-      <TripList tripData={tripData} /> 
+      <TripList 
+        tripData={tripData} 
+        eventsData={eventsData}
+      /> 
     </div>
   )
 }

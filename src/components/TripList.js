@@ -2,12 +2,16 @@ import React from "react";
 import TripCard from "./TripCard";
 
 
-function TripList({ tripData }) {
+function TripList({ tripData, eventsData }) {
 
   return(
     <div>
       {tripData.map(value => 
-      <TripCard value={value} key={value.id} /> 
+      <TripCard 
+        trip={value} 
+        key={value.id} 
+        eventsData={eventsData}
+      /> 
       )}
     </div>
   )

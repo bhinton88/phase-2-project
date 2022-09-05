@@ -66,6 +66,7 @@ function TripForm() {
             <Form.Input 
               fluid 
               name='tripName' 
+              value={formData.tripName}
               label="Trip Description"
               placeholder='Trip Description'
               onChange={handleChange} 
@@ -74,6 +75,7 @@ function TripForm() {
               fluid
               type="date"
               name="start_date"
+              value={formData.start_date}
               label='Trip Start' 
               placeholder='Trip Start Date'
               onChange={handleChange}  
@@ -82,6 +84,7 @@ function TripForm() {
               fluid 
               type="date"
               name="end_date"
+              value={formData.end_date}
               label='Trip End' 
               placeholder='Trip End Date'
               onChange={handleChange}  
@@ -94,6 +97,7 @@ function TripForm() {
               fluid
               search
               selection
+              value={formData.countries}
               options={countriesData}
               onChange={handleCountryAdd}
             />

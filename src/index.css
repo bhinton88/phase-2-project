@@ -1,0 +1,5 @@
+#tripCard {
+  display: flex;
+  padding-block: 10px;
+  justify-content: center;
+}
