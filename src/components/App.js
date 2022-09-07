@@ -54,10 +54,11 @@ export default App;
 // ---New Trip Form
 // ---Trip List
 // ----Trip card
-// -----Events list (each list is unique to each trip/only pulls up that trips events)
-// ------submit event
+// -----Events Page 
+// ------Submit event
+// ------Event List
 // --budget page 
-// ---budget list (each card with trip name on it and button to)
+// ---budget list
 // ---budget pie graph
 
 

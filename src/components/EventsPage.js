@@ -2,12 +2,12 @@ import React from "react";
 import EventsList from "./EventsList";
 import EventSubmit from "./EventSubmit";
 
-function EventsPage() {
+function EventsPage({ tripId, eventsData }) {
 
 return (
   <div>
-    <EventSubmit />
-    <EventsList />
+    <EventSubmit tripId={tripId} />
+    <EventsList eventsData={eventsData} tripId={tripId} />
   </div>
 )
 

@@ -8,50 +8,29 @@ function TripCard({ trip, eventsData }) {
 
   function handleClick (event) {
     setToggleEvents( toggleEvents => !toggleEvents)
-    console.log(event.target)
+    console.log(toggleEvents)
   }
 
 
   return(
     <div id="tripCard">
-      <div className="ui card">
-        <div className="content">
-          <div className="header">{trip.tripName}</div>
-        </div>
-        <div className="content">
-          <h4 className="ui sub header">Details:</h4>
-          <div className="ui small feed">
-            <div className="event">
-              <div className="content">
-                <p>Countries planning to visit:</p>
-                <ul>
-                  {trip.countries.map(value => <li key={value} >{value}</li>)}
-                </ul>
-              </div>
-            </div>
-            <div className="event">
-              <div className="content">
-                <p>Start date: {trip.start_date}</p>
-                <p>End date: {trip.end_date} </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="extra content">
-          <button className="ui button">Take me to the budget</button>
-        </div>
-        <div className="extra content">
-          <button 
-            className="ui button"
-            onClick={handleClick}
-          >
-          {toggleEvents ? "Hide Trip Events" : "Show Trip Events"}
-          </button>
-        </div>
-        <div>
-          {toggleEvents ? <EventsPage /> : null}
-        </div>
+      <div id="tripInfo">
+        <h3>{trip.tripName}</h3>
+        <p>Countries planning to visit:</p>
+        <ul>
+          {trip.countries.map(value => <li key={value} >{value}</li>)}
+        </ul>
+        <p>Start date: {trip.start_date}</p>
+        <p>End date: {trip.end_date} </p>
       </div>
+      <div id="infoButtons">
+        <button>Take me to the budget</button>
+
+        <button onClick={handleClick}>
+        {toggleEvents ? "Hide Trip Events" : "Show Trip Events"}
+        </button>
+      </div>
+      {toggleEvents ? <EventsPage tripId={trip.id} eventsData={eventsData} /> : null}
     </div>
   )
 }

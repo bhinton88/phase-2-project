@@ -1,5 +1,16 @@
 #tripCard {
   display: flex;
-  padding-block: 10px;
+  width: max-content;
+  align-content: center;
+  width: auto;
+  flex-direction: column;
+  border: solid 1px black;
+  margin-block: 2rem;
+}
+
+#infoButtons {
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: 200px;
 }
