@@ -1,16 +1,33 @@
 import React from "react";
-import EventsList from "./EventsList";
-import EventSubmit from "./EventSubmit";
+import Table from 'react-bootstrap/Table';
 
 function EventsPage({ tripId, eventsData }) {
 
 return (
   <div>
-    <EventSubmit tripId={tripId} />
-    <EventsList eventsData={eventsData} tripId={tripId} />
+    <Table striped border hover >
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Category</th>
+          <th>Date of Event</th>
+        </tr>
+      </thead>
+      <tbody>
+        {eventsData
+        .filter(value => tripId === value.trip_id)
+        .map(value => 
+              <tr key={value.id}>
+                <td>{value.event}</td>
+                <td>{value.category}</td>
+                <td>{value.date}</td>
+              </tr>
+            )
+        }
+      </tbody>
+    </Table>
   </div>
-)
-
+  )
 }
 
 export default EventsPage;

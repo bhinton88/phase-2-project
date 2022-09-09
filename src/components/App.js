@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import TripPage from "./TripPage";
+import EventSubmit from "./EventSubmit";
 
 function App() {
 
@@ -29,13 +30,16 @@ function App() {
         <Route  path="/" exact>
           <Home />
         </Route>
-        <Route path="/trips">
+        <Route path="/Trips">
            <TripPage 
             tripData={tripData} 
             eventsData={eventsData}
           />
         </Route>
-        <Route path="/budget">
+        <Route path="/Event_Form">
+          <EventSubmit eventsData={eventsData} />
+        </Route>
+        <Route path="/Budget">
           {/* enter budget component here */}
         </Route>
       </Switch>
@@ -54,9 +58,8 @@ export default App;
 // ---New Trip Form
 // ---Trip List
 // ----Trip card
-// -----Events Page 
-// ------Submit event
-// ------Event List
+// -----Events Page
+// --Submit event
 // --budget page 
 // ---budget list
 // ---budget pie graph

@@ -1,16 +1,40 @@
+body {
+  background-image: url("./images/element5-digital-uE2T1tCFsn8-unsplash.jpg");
+  background-size: cover;
+}
+
 #tripCard {
-  display: flex;
+  display: inline-flex;
   width: max-content;
   align-content: center;
   width: auto;
   flex-direction: column;
-  border: solid 1px black;
-  margin-block: 2rem;
+  margin-inline: 20px;
 }
 
 #infoButtons {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 200px;
+
+}
+
+#eventform {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  background-color: blanchedalmond;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#tripsubmit {
+  background-color: blanchedalmond;
+  margin-block: 20px;
+  padding-block: 20px;
+  border-radius: 15px;
+}
+
+#tripformbuttons {
+  padding: 10px; 
 }
