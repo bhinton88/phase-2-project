@@ -31,17 +31,6 @@
       "start_date": "2018-09-15",
       "end_date": "2018-09-25",
       "id": 3
-    },
-    {
-      "tripName": "African Safari",
-      "countries": [
-        "Namibia",
-        "South Africa",
-        "Zimbabwe"
-      ],
-      "start_date": "2023-04-15",
-      "end_date": "2023-04-30",
-      "id": 4
     }
   ],
   "events": [

@@ -59,6 +59,7 @@ export default App;
 // ---New Trip Form
 // ---Trip List
 // ----Trip card
+
 // -----Events Page
 // --Submit event
 // --budget page 
@@ -71,12 +72,3 @@ export default App;
 
 // should be able to do this by comparing the trip ID from our trips data and the trip_id that is 
 // saved to our events entry when a new event is created. 
-
-// ** can create a select with each trip name in it that updates and when the form is submitted
-// we can use some logic to 
-
-
-// want to be able to click on a trip and it take you to events related to that trip
-
-// want to click on the budget tab and it takes you to a page where each event is 
-// listed under each category

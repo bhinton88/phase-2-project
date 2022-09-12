@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form,Dropdown, Button } from 'semantic-ui-react'
+import Select from "react-select";
 
 function TripForm() {
   const [countriesData, setCountriesData] = useState([]) // for our select element
@@ -15,23 +15,19 @@ function TripForm() {
     .then(response => response.json())
     .then(data => {
       let countryArray = data.sort((a,b)=>a.name.common.localeCompare(b.name.common)).map(value => {
-        return {key: value.name.common, text: value.name.common, value: value.name.common}
+        return {value: value.name.common, label: value.name.common}
       })
       setCountriesData(countryArray)
     })
   }, [])
 
-  // for on change event handlers using semantic UI, we MUST pass both an event and a data
-  // argument in order to extract the value out of the input
-
-  function handleCountryAdd (event, data){
+  function handleAddingCountries(selectedOptions) {
+    const updatedArray = selectedOptions.map(value => value.value)
     setFormData({
       ...formData,
-      countries: data.value
+      countries: [...updatedArray]
     })
-    console.log(formData)
   }
-
 
   function handleChange(event){
     setFormData({
@@ -52,8 +48,9 @@ function TripForm() {
     .then(response => response.json())
     .then(data => console.log(data))
 
-    // will need to add this to our trip list page once we have that component
+    // will need to add this to our trip list page once we have that component up and running
 
+    event.target.reset()
   }
 
   return (
@@ -105,6 +102,48 @@ function TripForm() {
           <Button type="submit">Add Trip</Button>
         </Form> 
       </div>
+    <div>
+      <form
+        onSubmit={handleSubmit}
+      >
+        <label>
+          Trip Name:
+          <input 
+            type="text"
+            name="tripName"
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Countries:
+          <Select 
+            isMulti
+            name="countries"
+            options={countriesData}
+            onChange={handleAddingCountries}
+          />
+        </label>
+        <label>
+          Start date:
+          <input 
+            type="date"
+            id="start"
+            name="start_date"
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          End date:
+          <input
+            type="date"
+            id="end"
+            name="end_date"
+            onChange={handleChange}
+          />
+        </label>
+        <button type="submit">Add New Trip</button>
+      </form>
+>>>>>>> parent of f61ab75 (major compontent updates)
     </div>
   )
 }

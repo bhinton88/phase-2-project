@@ -1,7 +1,7 @@
 import React from "react";
-import TripCard from "./TripCard";
 
 
+<<<<<<< HEAD
 function TripList({ tripData, eventsData }) {
 
   return(
@@ -15,6 +15,10 @@ function TripList({ tripData, eventsData }) {
       )}
     </div>
   )
+=======
+function TripList() {
+
+>>>>>>> parent of f61ab75 (major compontent updates)
 
 }
 
