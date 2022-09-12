@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import TripPage from "./TripPage";
 import EventSubmit from "./EventSubmit";
+import BudgetPage from "./BudgetPage";
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
           <EventSubmit eventsData={eventsData} />
         </Route>
         <Route path="/Budget">
-          {/* enter budget component here */}
+          <BudgetPage tripData={tripData} />
         </Route>
       </Switch>
     </div>

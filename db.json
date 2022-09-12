@@ -53,11 +53,5 @@
       "category": "Tourism",
       "date": "2011-08-08"
     }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "name": "Bobby"
-    }
   ]
 }

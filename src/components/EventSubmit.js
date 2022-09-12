@@ -8,17 +8,17 @@ function EventSubmit( ) {
       <Form id="eventSubmit">
         <Form.Group widths="equal">
           <Form.Input
-            label="Trip Description:"
+            label="Event Description:"
             type="text"
             name="event"
             placeholder="Brief event Description"
           />
           <Form.Input
-            label="Trip Cost:"
+            label="Event Cost:"
             type="number"
             name="cost"
             step="0.1"
-            placeholder="Enter trip cost"
+            placeholder="Enter Event cost"
           />
           <Form.Input
             label="Event Date" 
@@ -27,7 +27,7 @@ function EventSubmit( ) {
           />
           </Form.Group>
           <br/>
-          <label>Choose an event Category</label>
+          <label>Choose an Event Category</label>
           <select name="category">
             <option value="Tourism">Tourism</option>
             <option value="Food">Food</option>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EventsPage from "./EventsPage";
+import { Accordion } from "react-bootstrap";
 
 
 function TripCard({ trip, eventsData }) {
@@ -13,45 +14,35 @@ function TripCard({ trip, eventsData }) {
 
 
   return(
-    <div id="tripCard">
-      <div className="ui card">
-        <div className="content">
-          <div className="header">{trip.tripName}</div>
-        </div>
-        <div className="content">
-          <h4 className="ui sub header">Countries Visited:</h4>
-            <div className="ui small feed">
-              <div className="event">
-                <div className="content">
-                  <div className="summary">
-                    <ul>
-                    {trip.countries.map(value => <li key={value} >{value}</li>)}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="event">
-                <div className="content">
-                  <div className="summary">
-                    <p>Trip Start Date: {trip.start_date}</p>
-                    <p>Trip End Date: {trip.end_date}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div className="content">
-          <button id={trip.id} className="ui button" onClick={handleClick}>{toggleEvents ? "Hide Trip Events" : "Show Trip Events"}</button>
-          {toggleEvents ? <EventsPage eventsData={eventsData} tripId={trip.id} /> : null}
-        </div>
-   </div>
-</div>
-
-
+    <div id="tripcardcontainer">
+      <div id="tripCard">
+        <h2><strong>{trip.tripName}</strong></h2>
+        <br/>
+        <h4>Countries Visited:</h4>
+          <ul>
+            {trip.countries.map(value => <li key={value} >{value}</li>)}
+          </ul>
+          <p>Trip Start Date: {trip.start_date}</p>
+          <p>Trip End Date: {trip.end_date}</p>
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header onClick={handleClick}>{toggleEvents ? "Hide Trip Events" : "Show Trip Events"}</Accordion.Header>
+              <Accordion.Body>
+              {toggleEvents ? <EventsPage eventsData={eventsData} tripId={trip.id} /> : null}
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+          {/* <button id={trip.id} className="ui button" onClick={handleClick}>{toggleEvents ? "Hide Trip Events" : "Show Trip Events"}</button>
+                {toggleEvents ? <EventsPage eventsData={eventsData} tripId={trip.id} /> : null} */}
+      </div>
+    </div>
   )
 }
 
 
 export default TripCard;
 
-// when the button is clicked, the events will show below the trip, use a toggle state variable 
+
+// things left to do:
+// add buttons to take to budget page and to submit event form
+// re-format trip cards 

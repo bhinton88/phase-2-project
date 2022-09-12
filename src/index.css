@@ -1,15 +1,26 @@
 body {
   background-image: url("./images/element5-digital-uE2T1tCFsn8-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
   background-size: cover;
 }
 
 #tripCard {
-  display: inline-flex;
-  width: max-content;
-  align-content: center;
-  width: auto;
-  flex-direction: column;
-  margin-inline: 20px;
+    border: grey solid 1px;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 70% ;
+    height: auto;
+    display: flex;
+    margin: 1rem 1rem;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+#tripcardcontainer {
+  justify-content: center;
+  display: flex;
 }
 
 #infoButtons {

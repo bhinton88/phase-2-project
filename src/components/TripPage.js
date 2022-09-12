@@ -7,7 +7,6 @@ function TripsPage({ tripData, eventsData }) {
 
   return (
     <div>
-      Check out my trips!
       <TripForm />
       <TripList 
         tripData={tripData} 
